@@ -1,4 +1,4 @@
-<!doctype html>
+<!doctype html >
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
     <meta charset="utf-8">
@@ -25,12 +25,15 @@
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
-<body {{-- dir="rtl" --}}>
+<body  dir="rtl" >
     <div id="app">
-        <nav class="navbar navbar-light navbar-expand-md sticky-top navigation-clean-button" style="height:50px;background-color:#37434d;color:#ffffff;">
-            <div class="container-fluid">
+        <nav class="navbar navbar-dark navbar-expand-md sticky-top navigation-clean-button" style="height:50px;background-color:#37434d;color:#ffffff;">
+            <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}" style="color:#ffffff;">
-                    {{ config('app.name', 'Laravel') }}
+                    {{ __(' ma3louma.org   ') }}
+                </a>
+                <a class="navbar-brand" href="{{ url('/demand') }}" style="color:#ffffff;">
+                    {{ __(' فضاء المطالب   ') }}
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
@@ -43,18 +46,18 @@
                     </ul>
 
                     <!-- Right Side Of Navbar -->
-                    <ul class="navbar-nav ml-auto">
+                    <ul class="navbar-nav   ml-0 " style="color: #ffffff">
                         <!-- Authentication Links -->
                         @guest
                             @if (Route::has('login'))
-                                <li class="nav-item"style="color:#ffffff;">
-                                    <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                                <li class="nav-item " style="color:#ffffff;">
+                                    <a class="nav-link" href="{{ route('login') }}">{{ __(' تسجيل الدخول   ') }}</a>
                                 </li>
                             @endif
 
                             @if (Route::has('register'))
                                 <li class="nav-item" style="color:#ffffff;">
-                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                                    <a class="nav-link" href="{{ route('register') }}">{{ __(' انشاء حساب') }}</a>
                                 </li>
                             @endif
                         @else
@@ -67,7 +70,7 @@
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
-                                        {{ __('Logout') }}
+                                        {{ __('خروج') }}
                                     </a>
 
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">

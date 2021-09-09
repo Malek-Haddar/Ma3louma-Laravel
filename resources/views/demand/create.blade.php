@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="container">
-    <h2> مطلب </h2>
+    <h2 class="d-flex justify-content-center""> مطلب </h2>
     <form action="/demand"
     method="POST"
     enctype="multipart/form-data">
@@ -11,7 +11,7 @@
       <div class="row">
         <div class="col-md-6">
           <div class="form-group">
-            <label for="name">الاسم و اللقب (او التسمية الاحتماعية) </label>
+            <label for="name" class="d-flex">الاسم و اللقب (او التسمية الاحتماعية) </label>
             <input type="text" value="{{ old('name')}}" name="name" class="form-control" placeholder="" id="name">
             @error('name')
                 {{$message}}
@@ -23,7 +23,7 @@
       <div class="row">
         <div class="col-md-6">
           <div class="form-group">
-            <label for="adress">العنوان (او المقر الاجتماعي  ) </label>
+            <label for="adress" class="d-flex">العنوان (او المقر الاجتماعي  ) </label>
             <input type="text" name="adress" class="form-control" placeholder="" id="adress">
           </div>
 
@@ -34,7 +34,7 @@
         <div class="col-md-6">
 
           <div class="form-group">
-            <label for="structure">الهيكل المعني</label>
+            <label for="structure" class="d-flex"> الهيكل المعني</label>
             <input type="text" name="structure" class="form-control" id="structure" placeholder="">
           </div>
         </div>
@@ -47,16 +47,22 @@
         <div class="col-md-6">
 
           <div class="form-group">
-            <label for="formula">الصيغة المراد بها الحصول على المعلومة  </label>
-            <input type="text" name="formula" class="form-control" id="formula" placeholder=" ">
-          </div>
+            <label for="formula" class="d-flex"> الصيغة المراد بها الحصول على المعلومة  </label>
+            <select type="text" class="form-control" name="formula" id="formula" required>
+                <option disabled selected> -الإختيار- </option>
+                <option value="نسخة ورقية">نسخة ورقية</option>
+                <option value="نسخة الكترونية"> نسخة الكترونية </option>
+                <option value="مقتطف من المعلومة">مقتطف من المعلومة </option>
+                <option value="الاطلاع على المعلومة على عين المكان "> الاطلاع على المعلومة على عين المكان  </option>
+            </select>          </div>
         </div>
         <!--  col-md-6   -->
 
         <div class="col-md-6">
           <div class="form-group">
-            <label for="information">المعلومة المطلوبة</label>
+            <label for="information" class="d-flex">المعلومة المطلوبة</label>
             <input type="text" name="information" class="form-control" id="information" placeholder="">
+
           </div>
 
         </div>
@@ -66,7 +72,7 @@
 
 
 
-      <button type="submit" class="btn btn-primary mt-4">Submit</button>
+      <button type="submit" class="btn btn-primary mt-4">إرسال</button>
     </form>
   </div>
   @endsection

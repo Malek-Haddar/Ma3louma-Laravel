@@ -2,34 +2,32 @@
 
 @section('content')
 
-<div class="container">
-<div class="row">
+<div class="container ">
+<div class="row d-flex">
     <div class="col-md-12">
-        <div class="card">
-            <div class="card-body">
-                <h5 class="card-title text-uppercase mb-0">Manage Demands</h5>
-                    <a class="btn btn-success" href="/demand/create" <i class="fa fa-plus" >
-                        Add Demand
+        <div class="card ">
+            <div class="card-body d-flex justify-content-around">
+                <h5 class="card-title text-uppercase mb-2">المطالب</h5>
+
+                <a class="btn btn-success d-flex justify-content-center" " href="/demand/create" ><i class="fa fa-plus mt-1 ml-1" ></i>
+                        إضافة مطلب
                     </a>
             </div>
-
-            <div class="table-responsive">
+            <div class="table-responsive ml-3 ">
                 <table class="table no-wrap user-table mb-0">
                   <thead>
                     <tr>
-                      <th scope="col" class="border-0 text-uppercase font-medium pl-4">#</th>
-                      <th scope="col" class="border-0 text-uppercase font-medium">Name</th>
-                      <th scope="col" class="border-0 text-uppercase font-medium">adress</th>
-                      <th scope="col" class="border-0 text-uppercase font-medium">structure</th>
-                      <th scope="col" class="border-0 text-uppercase font-medium">formula</th>
-                      <th scope="col" class="border-0 text-uppercase font-medium">information</th>
+                      <th scope="col" class="border-0 text-uppercase font-medium">الاسم و اللقب</th>
+                      <th scope="col" class="border-0 text-uppercase font-medium">العنوان</th>
+                      <th scope="col" class="border-0 text-uppercase font-medium">الهيكل المعني</th>
+                      <th scope="col" class="border-0 text-uppercase font-medium">الصيغة المراد بها الحصول على المعلومة</th>
+                      <th scope="col" class="border-0 text-uppercase font-medium">المعلومة المطلوبة</th>
                     </tr>
                   </thead>
                   <tbody>
                       @foreach ($demands as $demand)
                     <tr>
 
-                      <td class="pl-4">1</td>
                       <td>
                           <h5 class="font-medium mb-0">{{ $demand->name }}</h5>
                       </td>
@@ -40,7 +38,7 @@
                           <span class="text-muted">{{ $demand->structure }}</span><br>
                       </td>
                       <td>
-                          <span class="text-muted"> {{ $demand->formula }} </span><br>
+                          <span class="text-muted "> {{ $demand->formula }} </span><br>
                       </td>
                       <td>
                           <span class="text-muted"> {{ $demand->information }} </span><br>

@@ -17,7 +17,7 @@ class DemandsController extends Controller
     {
         /*   // eager code //      $demand = Demand::with('demand')->get(); */
         return view('demand.index')
-            ->with('demands', Demand::latest()->get());
+            ->with('demands', Demand::latest()->with(['user'])->get());
     }
 
     /**
@@ -38,6 +38,7 @@ class DemandsController extends Controller
      */
     public function store(Request $request)
     {
+        ddd($request->all());
 
         $request->validate([
             'name' => 'required',

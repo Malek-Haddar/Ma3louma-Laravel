@@ -19,18 +19,16 @@
                     <table class="table no-wrap user-table mb-0">
                       <thead>
                         <tr>
-                          <th scope="col" class="border-0 text-uppercase font-medium pl-4">#</th>
-                          <th scope="col" class="border-0 text-uppercase font-medium">Name</th>
-                          <th scope="col" class="border-0 text-uppercase font-medium">adress</th>
-                          <th scope="col" class="border-0 text-uppercase font-medium">structure</th>
-                          <th scope="col" class="border-0 text-uppercase font-medium">formula</th>
-                          <th scope="col" class="border-0 text-uppercase font-medium">information</th>
+                          <th scope="col" class="border-0 text-uppercase font-medium">الاسم و اللقب</th>
+                          <th scope="col" class="border-0 text-uppercase font-medium">العنوان</th>
+                          <th scope="col" class="border-0 text-uppercase font-medium">الهيكل المعني</th>
+                          <th scope="col" class="border-0 text-uppercase font-medium">الصيغة المراد بها الحصول على المعلومة</th>
+                          <th scope="col" class="border-0 text-uppercase font-medium">المعلومة المطلوبة</th>
                         </tr>
                       </thead>
                       <tbody>
                         <tr>
 
-                          <td class="pl-4">1</td>
                           <td>
                               <h5 class="font-medium mb-0">{{ $demand->name }}</h5>
                           </td>

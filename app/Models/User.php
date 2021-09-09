@@ -41,7 +41,7 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
-    public function demand()
+    public function demands()
     {
         return $this->hasMany(Demand::class);
     }
